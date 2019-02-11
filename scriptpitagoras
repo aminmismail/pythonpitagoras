@@ -1,0 +1,36 @@
+import math
+print("""Modelo 1: x² = a² + b²
+Modelo 2: a² = x² - b²
+Modelo 3: b² = a² - x²
+
+        /|
+       / |
+      /  |
+   x /   |
+    /    | a (co)
+   /     |
+  /      |
+ /      _|
+/_)____|_|
+     b (ca)     """)
+m1 = input("Qual modelo: ")
+if m1 == "1":
+        co1 = float(input("Valor do cateto oposto: "))
+        ca1 = float(input("Valor do cateto adjacente: "))
+        h1 = co1 ** 2 + ca1 ** 2
+        h1s = math.sqrt(h1)
+        print("O X mede {:.2f}".format(h1s))
+elif m1 == "2":
+        xis = float(input("Valor do X: "))
+        ca1 = float(input("Valor do cateto adjacente: "))
+        h2 = xis ** 2 - ca1 ** 2
+        h2s = math.sqrt(h2)
+        print("O 'a' mede {:.2f}".format(h2s))
+elif m1 == "3":
+        co1 = float(input("Valor do cateto oposto: "))
+        xis = float(input("Valor do X: "))
+        h3 = xis ** 2 - co1 ** 2
+        h3s = math.sqrt(h3)
+        print("O 'b' mede {:.2f}".format(h3s))
+else:
+    print("Fim do programa!")
